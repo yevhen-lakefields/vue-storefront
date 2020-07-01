@@ -23,6 +23,9 @@ export default {
       { rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico' }
+    ],
+    script: [
+      { src: 'https://cdn.checkout.com/js/framesv2.min.js' }
     ]
   },
   loading: { color: '#fff' },
@@ -42,10 +45,12 @@ export default {
       useRawSource: {
         dev: [
           '@vue-storefront/commercetools',
+          '@vue-storefront/checkout-com',
           '@vue-storefront/core'
         ],
         prod: [
           '@vue-storefront/commercetools',
+          '@vue-storefront/checkout-com',
           '@vue-storefront/core'
         ]
       }
@@ -58,12 +63,14 @@ export default {
     // @core-development-only-end
   ],
   modules: [
+    ['@vue-storefront/checkout-com-nuxt', { publicKey: 'pk_test_8638c4e2-e44a-407f-a5f3-594a8503bcd0' }],
     'nuxt-i18n',
     'cookie-universal-nuxt',
     'vue-scrollto/nuxt'
   ],
   build: {
     transpile: [
+      // '@vue-storefront/checkout-com-nuxt',
       'vee-validate/dist/rules'
     ],
     plugins: [
