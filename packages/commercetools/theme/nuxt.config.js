@@ -26,6 +26,7 @@ export default {
     ],
     script: [
       { src: 'https://cdn.checkout.com/js/framesv2.min.js' }
+      // { src: 'https://x.klarnacdn.net/kp/lib/v1/api.js' }
     ]
   },
   loading: { color: '#fff' },
@@ -70,7 +71,6 @@ export default {
   ],
   build: {
     transpile: [
-      // '@vue-storefront/checkout-com-nuxt',
       'vee-validate/dist/rules'
     ],
     plugins: [
